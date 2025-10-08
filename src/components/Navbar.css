@@ -1,0 +1,264 @@
+/* Navbar.css */
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 2rem;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+/* Logo */
+.navbar-logo {
+  flex-shrink: 0;
+  zoom: 200%;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Hamburger Menu */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.navbar-hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #1f2937;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.navbar-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar-link:hover {
+  color: #dc2626;
+}
+
+/* Dropdown */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  min-width: 200px;
+  list-style: none;
+  z-index: 100;
+}
+
+.navbar-dropdown-menu li {
+  padding: 0;
+}
+
+.navbar-dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #1f2937;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.navbar-dropdown-menu a:hover {
+  background-color: #f3f4f6;
+  color: #dc2626;
+}
+
+/* Contact Button */
+.navbar-cta {
+  flex-shrink: 0;
+}
+
+.navbar-button {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+.navbar-button:hover {
+  background-color: #b91c1c;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    border-left: 2px solid #dc2626;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  /* Show contact button in mobile menu */
+  .navbar-menu.active::after {
+    content: '';
+    display: block;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-menu {
+    gap: 1.5rem;
+  }
+
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+
+  .navbar-button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+  .navbar {
+    padding: 0 4rem;
+  }
+}

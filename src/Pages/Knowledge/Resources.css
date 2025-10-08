@@ -1,0 +1,240 @@
+/* Resources.css */
+
+.resources-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resources-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #0d47a1; /* Deep blue heading */
+}
+
+.resources-subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0d47a1; /* Deep blue */
+}
+
+.resources-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151; /* dark grey */
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+/* Image */
+.resources-image {
+  margin-bottom: 40px;
+}
+
+.resources-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Section */
+.resources-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.resources-stat-card {
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.resources-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resources-stat-card.dark {
+  background-color: #1f2937; /* dark card background */
+  border-color: #1f2937;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #0d47a1; /* deep blue for normal cards */
+}
+
+.resources-stat-card.dark .stat-number {
+  color: #ffffff; /* white for dark cards */
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563; /* normal label color */
+  line-height: 1.4;
+}
+
+.resources-stat-card.dark .stat-label {
+  color: #d1d5db; /* label color for dark cards */
+}
+
+/* Buttons */
+.resources-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.resources-button {
+  padding: 0.85rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resources-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.resources-button-primary {
+  background-color: #0d47a1; /* deep blue */
+  color: #ffffff;
+}
+
+.resources-button-primary:hover {
+  background-color: #094187; /* darker blue */
+}
+
+.resources-button-secondary {
+  background-color: #ffffff;
+  color: #0d47a1;
+  border: 2px solid #0d47a1;
+}
+
+.resources-button-secondary:hover {
+  background-color: #e3f2fd; /* light blue hover */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .resources-heading {
+    font-size: 2.5rem;
+  }
+
+  .resources-subheading {
+    font-size: 1.35rem;
+  }
+
+  .resources-description {
+    font-size: 1rem;
+  }
+
+  .resources-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .resources-section {
+    padding: 3rem 1rem;
+  }
+
+  .resources-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .resources-subheading {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .resources-description {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .resources-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .resources-stat-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .stat-number {
+    font-size: 2.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .resources-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .resources-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .resources-heading {
+    font-size: 1.75rem;
+  }
+
+  .resources-subheading {
+    font-size: 1.05rem;
+  }
+
+  .resources-description {
+    font-size: 0.9rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
